@@ -48,7 +48,7 @@
       print(Info.__license__)
       Info.open_project_link()
       ```
-  * 🔖 [`PyPi`](https://pypi.org/project/PlistParser/) 与 [`GitHub`](https://github.com/whiteEelsYikes/PlistParser) 可能存在不同步或者一定差异等情况 主要以 [`PyPi`](https://pypi.org/project/PlistParser/) 为标准
+  * 🔖 [`PyPi`](https://pypi.org/project/PlistParser/) 与 [`GitHub`](https://github.com/whiteEelsYikes/PlistParser) 可能存在不同步或者一定差异等情况 主要以 [`GitHub`](https://github.com/whiteEelsYikes/PlistParser) 为标准
 
 * 🪛🔧 使用方法
   * 🔖 本扩展库为 扩展类型库 所以可能存在很多功能和扩展性 这里 作者提示 
