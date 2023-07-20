@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: PlistParser
-Version: 2023.7.20
+Version: 2023.7.20.1
 Summary: Extension package for .plist file parsing
 Home-page: https://github.com/whiteEelsYikes/PlistParser
 Author: white-EelsYikes
@@ -48,9 +48,11 @@ License-File: LICENSE.txt
   * 当前该扩展库主要 参考 [`PyPi`](https://pypi.org/project/PlistParser/) 说的即可
   * 本py扩展程序包主要提供了py操作.plist xml 文件的 功能 `特别是对于苹果的 .plist xml 配置文件`
   * 本py扩展程序包将秉承着 `简单` `易用` `轻量` `高扩展` `高自定义` 以及 `高自由度` 来构建程序
-  * 程序作者并不从事 .plist 有关职业 比如 `ios开发` `ios软件开发` `ios刷机` `ios检测` 等等 使用该程序不会完全完善(其实连帮忙测bug的人都没有😂)所以本程序可能有一定`BUG`或者不太完善的地方
+  * 程序作者并不从事 .plist 有关职业 比如 `ios开发` `ios软件开发` `ios刷机` `ios检测` 等等 所有该程序不会完全完善(其实连帮忙测bug的人都没有😂)所以本程序可能有一定`BUG`或者不太完善的地方
   * emm 请多多指教 如果有好的想法或者`BUG`等需要反馈的 欢迎 
   * ##### `谢谢(Thank you)`
+  * 关于集成 .pyd .c .cpp cython 声明:
+    * `因为一些原因 可以下载 PlistParser 源代码来按需要自行使用 Cython 编译 .pyd .c .cpp 扩展`
 
 * 🫳 获取 安装 方法
   * [`PyPi`](https://pypi.org/project/PlistParser/)
@@ -58,7 +60,7 @@ License-File: LICENSE.txt
   * python pip 安装最新版
     * ``python -m pip install PlistParser``
   * python pip 安装指定版本
-    * ``python -m pip install PlistParser>=版本号``
+    * ``python -m pip install PlistParser == 版本号``
   * 验证安装
     * 打开 PyShell 然后执行以下代码验证安装
     * ```python
@@ -84,20 +86,19 @@ License-File: LICENSE.txt
       
       from PlistParser import Extend  # .plist 解析器 扩展函数库
       from PlistParser import Info  # .plist 解析器 相关信息
-      from PlistParser import DisplaceTemplate  # .plist 解析器置换模板文件包
       ```
     * 相关库的API(接口)
       * [`GitHub 文档集`](https://github.com/whiteEelsYikes/PlistParser/tree/main/PlistParser.doc-info)
       * 在[`PyPi`](https://pypi.org/project/PlistParser/)下载项目压缩包 其中可以找到`PlistParser.doc-info`与`PlistParser.test-s`他们分别保存了项目构建时保留的教程文档以及测试调试文件 可以参考 这里提供下载
     * 最后
        * Extend.py库 Info.py库 DisplaceTemplate包
-       * `Extend` `Info` `DisplaceTemplate` 这三个库/包 可以不用管 因为是预留的 哪怕里面有 `内容` `功能` 实现 哪大概率您也用不到
+       * `Extend` `Info` 这两个库/包 可以不用管 因为是预留的 哪怕里面有 `内容` `功能` 实现 哪大概率您也用不到
   * 🛠️ 实例
     * 功能实例
       * 解析一个plist文件
         * `pass`
     * 测试实例
-      * 参考项目源码压缩包中的 `PlistParser.test-s` 目录
+      * 参考项目源码压缩包中的 `PlistParser.test-s` 或 `PlistParser.doc-info` 目录
   * 扩展
     * 基础设计扩展
       * `pass`

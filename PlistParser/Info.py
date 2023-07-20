@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-__version__ = '2023.7.20'
+__version__ = '2023.7.20.1'
 
 __build_peoples__ = {
     r'white-EelsYikes': '2172989337@qq.com',
