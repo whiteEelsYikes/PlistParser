@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+PlistParser/Base64.py
+PlistParser/Extend.py
+PlistParser/Info.py
+PlistParser/Plist.py
+PlistParser/PlistParser.py
+PlistParser/__init__.py
+PlistParser.egg-info/PKG-INFO
+PlistParser.egg-info/SOURCES.txt
+PlistParser.egg-info/dependency_links.txt
+PlistParser.egg-info/top_level.txt

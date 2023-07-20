@@ -48,7 +48,7 @@
 
 ---
 ## PlistItem对象 提供的方法(即提供的API)
-* PlistItem(self, item_index_tuple, item, data=None, item_index_head='')
+* PlistItem(item_index_tuple, item, data=None, item_index_head='')
   * 创建 初始化一个PlistItem对象 
   * ```
     :param item_index_tuple:
@@ -65,13 +65,13 @@
     :param item_index_head: 当前节点的 前缀头数据 在  __pos__ __neg__ __invert__ 中引用拼接 节点路径前缀
     :return:
     ```
-* PlistItem.simplification_dict(self, plist_dict=None)
+* PlistItem.simplification_dict(plist_dict=None)
   * 将当前节点以及下级节点 转换为 PlistParser 解析器 接受的 dict
   * ``` 
     :param plist_dict: 指定该参数 则 会将 解析的dict数据更新在 指定的 plist_dict 中
     :return: 完成解析的 dict
     ```
-* PlistItem.load_parse_dict(self, load_dict, attribute_mapping_dict, index_tuple=None, class_item_obj=None, key_error=None)
+* PlistItem.load_parse_dict(load_dict, attribute_mapping_dict, index_tuple=None, class_item_obj=None, key_error=None)
   * 提供将 parse_dict  插入 并更新到 此节点 会直接改变 self的数据
   * ```
     :param load_dict:  需要插入当前节点的 parse_dict
@@ -91,13 +91,134 @@
 
 
 ---
-## 应用 实例介绍
+# 应用 实例介绍
+`Plist 设计的初衷是对接 PlistParser`
+`使 PlistParser 变得简单易用 且强大`
+`使用 Plist 需要联动 PlistParser 才能最大化其作用和优点长处`
 
 ---
 
 
+## 基本应用
+```python
+
+from PlistParser.Plist import PlistItem
+
+plist = PlistItem((),'plist')  # 创建一个plist 节点
+
+print(+plist)  # 输出字典[]取值str代码
+print(-plist)  # 输出PlistParser解析器支持的dict
+print(~plist)  # 输出 当前节点的路径 以元组的方式(也是PlistParser解析器支持的元组路径)
+print(plist + {})  # 下面进行 插入操作 不会影响 plist原来的数据
+print(plist + ())
+print(plist + [])
+print(plist - {})  # 下面进行 去除操作 不会影响 plist原来的数据 这个操作只对dict有效
+plist * '.py文件的路径'  # 讲 plist另存为 .py的操作
+
+plist.update((),'','')  # 动态更新这个节点的属性
+print(plist.simplification_dict())  # 将当前节点以及下级节点 转换为 PlistParser 解析器 接受的 dict
+print(-plist)
+print(plist.save_py_file())  # 将当前节点及以下节点 转换为 标准 的py文件内容 数据内容会返回 而不是直接写入文件
+
+plist.load_parse_dict({},{})  # 提供将 parse_dict  插入 并更新到 此节点 会直接改变 self的数据
+"""
+上面这个 plist.load_parse_dict
+plist.load_parse_dict -> PlistItem.load_parse_dict
+其中 
+load_dict 与 attribute_mapping_dict :
+    这两个都是字典 
+    PlistItem.load_parse_dict扫描load_dict时 需要依赖attribute_mapping_dict来构建属性(节点) 确认属性(节点)名称这些
+    load_dict 与 attribute_mapping_dict 是相互关联的
+    attribute_mapping_dict中记录的是load_dict每个key的名字
+    例如:
+        load_dict 为以下时 则:
+            {
+                'a': 1,
+                'b': 2,
+                'c': {
+                    'd' : 2,
+                    'e' : 'str',
+                },
+            }
+        attribute_mapping_dict 应为:
+            {
+                'a': 'a name',
+                'b': 'b name',
+                'c': {
+                    'c' : 'c name'  # 这里重复以下 这个'c' key的名字映射 因为c是一个字典所有只能用在字典里重复'c'key的方法兼容映射其对应的属性(节点)名称
+                    'd' : 'a name',
+                    'e' : 'e name',
+                },
+            }
+        如果 load_dict 中有(任何)一个key 没有存在 attribute_mapping_dict 中登记对应名字时:
+            我们想要跳过这个没有在 attribute_mapping_dict 中进行登记的 load_dict的key 就可以使用:
+                PlistItem.load_parse_dict 的 key_error 参数
+                注意当 attribute_mapping_dict 没有存在 load_dict 中的任何一个key时:
+                    如果没有使用 PlistItem.load_parse_dict 的 key_error 参数 都会直接触发报错 (尽管可以修改源代码得到其他目的)
+"""
+
+```
+
+## 扩展应用
+```python
+
+"""
+为了方便我们操作和永久化存储pyplist
+我们使用自定义plist 但是这个plist是py版本的 基于.py文件和语法的plist 所以也可以称为pyplist
+"""
+
+from PlistParser.Plist import PlistItem
+
+class PlistCacheExtraItem(PlistItem):
+    pass
+class PlistCacheExtra(PlistItem):
+    def __init__(self, item_index_tuple, item, item_index_head=''):
+        super().__init__(item_index_tuple, item, item_index_head=item_index_head)
+        self.device_category = PlistCacheExtraItem(item_index_tuple, 'VuGdqp8UBpi9vPWHlPluVQ',
+                                                   item_index_head=item_index_head)
+        self.device_issuance = PlistCacheExtraItem(item_index_tuple, 'zHeENZu+wbg7PUprwNwBWg',
+                                                   item_index_head=item_index_head)
+        self.device_model = PlistCacheExtraItem(item_index_tuple, 'Z/dqyWS6OZTRy10UcmUAhw',
+                                                item_index_head=item_index_head)
+        self.device_system = PlistCacheExtraItem(item_index_tuple, 'ivIu8YTDnBSrYv/SN4G8Ag',
+                                                 item_index_head=item_index_head)
+class Plist(PlistItem):
+    """
+    更新解析 self 可以 self.__dict__ 来实现  或者  type()
+    """
+    def __init__(self, item_index_tuple=None, item='Plist', data=None, item_index_head=''):
+        item_index_tuple = () if item_index_tuple == None else item_index_tuple
+        super().__init__(item_index_tuple, item, item_index_head=item_index_head)
+        self.CacheUUID = PlistItem(item_index_tuple, 'CacheUUID')
+        self.CacheData = PlistItem(item_index_tuple, 'CacheData')
+        self.CacheVersion = PlistItem(item_index_tuple, 'CacheVersion')
+        self.CacheExtra = PlistCacheExtra(('CacheExtra',), 'CacheExtra')
 
 
+"""
+这里我自定义了一个plist的pyplist
+注意: 所有的pyplist都必须继承自PlistItem 包括pyplist的节点
+就如上面实列的这样
+"""
+
+plist = Plist()
+
+print(+plist)  # 输出字典[]取值str代码
+print(-plist)  # 输出PlistParser解析器支持的dict
+print(~plist)  # 输出 当前节点的路径 以元组的方式(也是PlistParser解析器支持的元组路径)
+print(plist + {})  # 下面进行 插入操作 不会影响 plist原来的数据
+print(plist + ())
+print(plist + [])
+print(plist - {})  # 下面进行 去除操作 不会影响 plist原来的数据 这个操作只对dict有效
+plist * '.py文件的路径'  # 讲 plist另存为 .py的操作
+
+plist.update((),'','')  # 动态更新这个节点的属性
+print(plist.simplification_dict())  # 将当前节点以及下级节点 转换为 PlistParser 解析器 接受的 dict
+plist.load_parse_dict({},{})  # 提供将 parse_dict  插入 并更新到 此节点 会直接改变 self的数据
+print(-plist)
+print(plist.save_py_file())  # 将当前节点及以下节点 转换为 标准 的py文件内容 数据内容会返回 而不是直接写入文件
+
+```
 
 
 

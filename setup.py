@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-
+import base64
+import os
+import plistlib
 
 import setuptools  # 导入setuptools打包工具
+from distutils.extension import Extension
 from Cython.Build import cythonize
+
 import PlistParser
 
 
@@ -13,6 +17,7 @@ import PlistParser
 
 with open('README.md', 'r', encoding='utf-8') as README_md:
     long_description = README_md.read()
+
 
 setuptools.setup(
     name='PlistParser',  # 项目名称
@@ -40,6 +45,13 @@ setuptools.setup(
         # 'plistlib',
     ],  # 表明当前模块依赖哪些包，若环境中没有，则会从pypi中下载安装
     packages=setuptools.find_packages(),
-    # ext_modules = cythonize(module_list=["test.py"], language_level=3)
+    # ext_modules=cythonize(
+    #     module_list=[
+    #         "PlistParser/*.py",
+    #         # os.__file__,
+    #         # base64.__file__,
+    #         # plistlib.__file__
+    #     ],
+    #     language_level=3,)
 
 )
