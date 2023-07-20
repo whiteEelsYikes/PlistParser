@@ -56,7 +56,7 @@
     * [`GitHub 文档集`](https://github.com/whiteEelsYikes/PlistParser/tree/main/PlistParser.doc-info) 
     * 在[`PyPi`](https://pypi.org/project/PlistParser/)下载项目压缩包 其中可以找到`PlistParser.doc-info`与`PlistParser.test-s`他们分别保存了项目构建时保留的教程文档以及测试调试文件 可以参考 这里提供下载
     * 🔖 如果您的电脑没有解压软件 我们也推荐了解压程序[`360zip`](http://360yasuo.cn/) 您也可以在[`PyPi`](https://pypi.org/project/PlistParser/)找到该程序 我们也提供下载
-  * 🧑‍💻 关于API
+  * 🧑‍💻 关于`API`
     * 相关库导入
       ```python
       from PlistParser import PlistParser  # .plist 解析器 引擎 提供 主要算法和解析转译支持
@@ -66,11 +66,11 @@
       from PlistParser import Extend  # .plist 解析器 扩展函数库
       from PlistParser import Info  # .plist 解析器 相关信息
       ```
-    * 相关库的API(接口)
+    * 相关库的`API`(接口)
       * [`GitHub 文档集`](https://github.com/whiteEelsYikes/PlistParser/tree/main/PlistParser.doc-info)
       * 在[`PyPi`](https://pypi.org/project/PlistParser/)下载项目压缩包 其中可以找到`PlistParser.doc-info`与`PlistParser.test-s`他们分别保存了项目构建时保留的教程文档以及测试调试文件 可以参考 这里提供下载
     * 最后
-       * Extend.py库 Info.py库 DisplaceTemplate包
+       * Extend.py库 Info.py库
        * `Extend` `Info` 这两个库/包 可以不用管 因为是预留的 哪怕里面有 `内容` `功能` 实现 哪大概率您也用不到
   * 🛠️ 实例
     * 功能实例
@@ -84,7 +84,7 @@
     * 高级设计扩展
       * `pass`
     * 🔖 本扩展程序皆可 `继承` `重写` 或者 `修改/补充源代码` 等方式实现 功能的扩展等 使该扩展库更符合 `需求`
-    * 🔖🔖 好了 最后有问题欢迎 `[`GitHub`](https://github.com/whiteEelsYikes/PlistParser)` [`QQ群`](https://qm.qq.com/cgi-bin/qm/qr?k=8kVUWBck0_zVoOit738kkHSRxW9UU6Ya&jump_from=webapi&authKey=IeeWqgHhgAnLkaeJgKBQxnBG+A7gb0C3ZjKLM2/6tsDzMz2rbuieSNmMaQzI3mo+) 讨论 供电功能和用法  等待您来发掘 (`文档写不动了 太肝了`)  
+    * 🔖🔖 好了 最后有问题欢迎 [`GitHub`](https://github.com/whiteEelsYikes/PlistParser)  [`QQ群`](https://qm.qq.com/cgi-bin/qm/qr?k=8kVUWBck0_zVoOit738kkHSRxW9UU6Ya&jump_from=webapi&authKey=IeeWqgHhgAnLkaeJgKBQxnBG+A7gb0C3ZjKLM2/6tsDzMz2rbuieSNmMaQzI3mo+) 讨论 供电功能和用法  等待您来发掘 (`文档写不动了 太肝了`)  
 
 * 总结最后
   * ## `拜拜`
