@@ -16,21 +16,19 @@
     * ### [`GitHub`](https://github.com/whiteEelsYikes/PlistParser)
     * [`QQ群群号：PlistParser(822515853)`](https://qm.qq.com/cgi-bin/qm/qr?k=8kVUWBck0_zVoOit738kkHSRxW9UU6Ya&jump_from=webapi&authKey=IeeWqgHhgAnLkaeJgKBQxnBG+A7gb0C3ZjKLM2/6tsDzMz2rbuieSNmMaQzI3mo+) <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=8kVUWBck0_zVoOit738kkHSRxW9UU6Ya&jump_from=webapi&authKey=IeeWqgHhgAnLkaeJgKBQxnBG+A7gb0C3ZjKLM2/6tsDzMz2rbuieSNmMaQzI3mo+"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="PlistParser" title="PlistParser"></a>
   * ## `贡献名单`
-      * `white-EelsYikes`: 邮箱2:<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=L1hHRltKAkpKQ1xWRkRKXG9eXgFMQEI" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_21.png"/></a> |邮箱2:<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=TjkmJzorYysrIg4-P2AtISM" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_21.png"/></a>
+      * `white-EelsYikes`: 邮箱1:<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=L1hHRltKAkpKQ1xWRkRKXG9eXgFMQEI" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_21.png"/></a> |邮箱2: <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=TjkmJzorYysrIg4-P2AtISM" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_21.png"/></a>
   * ## `赞助名单`
       * `pass`
   
 * 📖 前言
   * #### [`点击查看 GitHub README`](https://github.com/whiteEelsYikes/PlistParser/blob/main/README.md)
   * `停` `实际我并不会用 GitHub 至少写这个文档时不会 有考虑学习 但是我的GitHub会很乱 见谅`
-  * 其实作者甚至不只是 `GitHub` 不会用 `pypi`和`py` 也不是特别会用 如果有什么问题 请多包涵 `谢谢`
-  * 当前该扩展库主要 参考 [`PyPi`](https://pypi.org/project/PlistParser/) 说的即可
   * 本py扩展程序包主要提供了py操作.plist xml 文件的 功能 `特别是对于苹果的 .plist xml 配置文件`
   * 本py扩展程序包将秉承着 `简单` `易用` `轻量` `高扩展` `高自定义` 以及 `高自由度` 来构建程序
   * 程序作者并不从事 .plist 有关职业 比如 `ios开发` `ios软件开发` `ios刷机` `ios检测` 等等 所有该程序不会完全完善(其实连帮忙测bug的人都没有😂)所以本程序可能有一定`BUG`或者不太完善的地方
   * emm 请多多指教 如果有好的想法或者`BUG`等需要反馈的 欢迎 
   * ##### `谢谢(Thank you)`
-  * 关于集成 .pyd .c .cpp cython 声明:
+  * 关于集成 .pyd .c .cpp cython声明:
     * `因为一些原因 可以下载 PlistParser 源代码来按需要自行使用 Cython 编译 .pyd .c .cpp 扩展`
 
 * 🫳 获取 安装 方法
