@@ -52,7 +52,7 @@
   * 🔖 本扩展库为 扩展类型库 所以可能存在很多功能和扩展性 这里 作者提示 
   * 文档教程
     * [`GitHub 文档集`](https://github.com/whiteEelsYikes/PlistParser/tree/main/PlistParser.doc-info) 
-    * 在[`PyPi`](https://pypi.org/project/PlistParser/)下载项目压缩包 其中可以找到`PlistParser.doc-info`与`PlistParser.test-s`他们分别保存了项目构建时保留的教程文档以及测试调试文件 可以参考 这里提供下载
+    * 在[`PyPi`](https://pypi.org/project/PlistParser/)下载项目压缩包 其中可以找到`PlistParser.doc-info`与`PlistParser.test-info`他们分别保存了项目构建时保留的教程文档以及测试调试文件 可以参考 这里提供下载
     * 🔖 如果您的电脑没有解压软件 我们也推荐了解压程序[`360zip`](http://360yasuo.cn/) 您也可以在[`PyPi`](https://pypi.org/project/PlistParser/)找到该程序 我们也提供下载
   * 🧑‍💻 关于`API`
     * 相关库导入
@@ -66,7 +66,7 @@
       ```
     * 相关库的`API`(接口)
       * [`GitHub 文档集`](https://github.com/whiteEelsYikes/PlistParser/tree/main/PlistParser.doc-info)
-      * 在[`PyPi`](https://pypi.org/project/PlistParser/)下载项目压缩包 其中可以找到`PlistParser.doc-info`与`PlistParser.test-s`他们分别保存了项目构建时保留的教程文档以及测试调试文件 可以参考 这里提供下载
+      * 在[`PyPi`](https://pypi.org/project/PlistParser/)下载项目压缩包 其中可以找到`PlistParser.doc-info`与`PlistParser.test-info`他们分别保存了项目构建时保留的教程文档以及测试调试文件 可以参考 这里提供下载
     * 最后
        * Extend.py库 Info.py库
        * `Extend` `Info` 这两个库/包 可以不用管 因为是预留的 哪怕里面有 `内容` `功能` 实现 哪大概率您也用不到
@@ -75,7 +75,7 @@
       * 解析一个plist文件
         * `pass`
     * 测试实例
-      * 参考项目源码压缩包中的 `PlistParser.test-s` 或 `PlistParser.doc-info` 目录
+      * 参考项目源码压缩包中的 `PlistParser.test-info` 或 `PlistParser.doc-info` 目录
   * 扩展
     * 基础设计扩展
       * `pass`
