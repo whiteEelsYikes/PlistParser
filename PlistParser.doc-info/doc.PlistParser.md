@@ -127,6 +127,8 @@ base64_mode = {
     base64.b64encode:{},  # 先执行 加密操作
     Base64.Decode.bit64:{},  # 在执行一次 解密操作
     Base64.Encode.bit32:{},  # 在执行一次 32bit的加密操作
+    # 下面我们自定义一个操作:
+    lambda bytes_data, start, end, step=1: bytes_data[start:end:step]:{'start':3,'end':-4,'step':-1}
 }
 base64_end = plist_parser.parser_base64('PlistParser', base64_mode)
 print(base64_end)
