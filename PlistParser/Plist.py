@@ -158,7 +158,7 @@ class PlistItem:
 
     def save_py_file(self, type_index=None):
         """
-        将当前节点及以下节点 转换为 标准 的py文件 提供 永久的py源码存储方式
+        将当前节点及以下节点 转换为 标准的 .py文件 提供永久的py源码存储方式
         此方法无法直接保存文件 而是 会返回 符合 py语法的 字符数据
         该方法使用递归实现
         :param type_index: 默认调用时不用管这个参数 主要是留给 递归 验证 是否已经存在 一个 class 定义 防止 重复 定义
