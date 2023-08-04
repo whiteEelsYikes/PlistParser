@@ -14,6 +14,8 @@
 
 
 ## PlistItem对象 提供的属性和方法:
+* PlistItem.name
+  * 该属性提供 该属性的名称 就是属性名称的 str 字符
 * PlistItem.item_index_tuple
   * 该属性提供一个py 元组 元组顺序从左到右 分别表示在该节点在Plist中的路径
 * PlistItem.item
@@ -70,6 +72,25 @@
   * ``` 
     :param plist_dict: 指定该参数 则 会将 解析的dict数据更新在 指定的 plist_dict 中
     :return: 完成解析的 dict
+    ```
+* PlistItem.dict_key_replacement(replacement_dict, mapping_dict, key_error=None)
+  * 在 mapping_dict 中查找 replacement_dict 对应的 key 的替换值 并将其替换
+  * ````
+    :param replacement_dict: key 被替换的 dict
+    :param mapping_dict:  替换 key 的映射 dict
+    :return:
+    ````
+* PlistItem.attribute_mapping_dict(attribute_mapping_dict=None)
+  * 分析并返回当前节点以及下级节点的 attribute_mapping_dict
+  * ```
+    :param attribute_mapping_dict: 上级 attribute_mapping_dict 默认情况下为回调使用 默认参数即可
+    :return:
+    ```
+* PlistItem.attribute_mapping_dict_reverse(attribute_mapping_dict):
+  * 颠倒 attribute_mapping_dict_reverse 的 key 和 value
+  * ```
+    :param attribute_mapping_dict: 被颠倒 key value 的 attribute_mapping_dict
+    :return:
     ```
 * PlistItem.load_parse_dict(load_dict, attribute_mapping_dict, index_tuple=None, class_item_obj=None, key_error=None)
   * 提供将 parse_dict  插入 并更新到 此节点 会直接改变 self的数据
