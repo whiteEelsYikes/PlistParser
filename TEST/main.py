@@ -325,9 +325,9 @@ class FreeWindow(QtWidgets.QWidget):
         self.display_bar.setObjectName("display_bar")
         self.gridLayout.addWidget(self.display_bar, 0, 1, 1, 1)
 
-        self.timer = QtCore.QTimer(self)
-        self.timer.timeout.connect(lambda :self.display_bar.hide if self.display_bar.isHidden() else None)
-        self.timer.start()
+        # self.timer = QtCore.QTimer(self)
+        # self.timer.timeout.connect(lambda :self.display_bar.hide if self.display_bar.isHidden() else None)
+        # self.timer.start()
 
         self.gridLayout.setColumnMinimumWidth(0, 1)
         self.gridLayout.setColumnStretch(1, 1)
