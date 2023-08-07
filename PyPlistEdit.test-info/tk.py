@@ -125,7 +125,7 @@ name_map_dict = {'CacheUUID': 'CacheUUID', 'CacheData': 'CacheData', 'CacheVersi
 
 
 if __name__ == '__main__':
-    plist_dict = raed_plist('../TEST/example.plist',
+    plist_dict = raed_plist('../ExtendWidget/example.plist',
                             attribute_mapping_dict_iPhone14_Pro_Max, name_map_dict)
     display_json(plist_dict)
 
