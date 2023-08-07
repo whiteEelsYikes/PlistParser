@@ -6,7 +6,7 @@ import plistlib
 
 import setuptools  # 导入setuptools打包工具
 from distutils.extension import Extension
-from Cython.Build import cythonize
+# from Cython.Build import cythonize
 
 import PlistParser
 
